@@ -1,0 +1,9 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.12.0
+_src_path: gh:radio-aktywne/template-meta
+accountname: radio-aktywne
+description: PostgreSQL database template 🐘
+reponame: template-database-postgres
+repourl: https://github.com/radio-aktywne/template-database-postgres
+templatename: postgres
+type: database

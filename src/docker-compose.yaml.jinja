@@ -1,0 +1,15 @@
+services:
+  {{ databasename }}:
+    build:
+      context: ./
+      network: host
+    environment:
+      - "{{ envprefix }}__SERVER__HOST=${ {{- envprefix }}__SERVER__HOST:-0.0.0.0}"
+      - "{{ envprefix }}__SERVER__PORT=${ {{- envprefix }}__SERVER__PORT:-{{ port -}} }"
+      - "{{ envprefix }}__CREDENTIALS__USER__PASSWORD=${ {{- envprefix }}__CREDENTIALS__USER__PASSWORD:-password}"
+    network_mode: host
+    volumes:
+      - data:/database/data/
+
+volumes:
+  data: {}
