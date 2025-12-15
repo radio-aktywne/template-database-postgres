@@ -1,6 +1,12 @@
 plugins:
-  # Enable SQL plugin
+  # Enable SQL formatting plugin
   - prettier-plugin-sql
+  # Enable JSON sorting plugin
+  - prettier-plugin-sort-json
+  {%- if docs %}
+  # Enable package.json sorting plugin
+  - prettier-plugin-packagejson
+  {%- endif %}
 
 # Use PostgreSQL dialect
 language: postgresql
@@ -8,3 +14,6 @@ database: postgresql
 
 # Enforce uppercase keywords
 keywordCase: upper
+
+# Sort JSON recursively
+jsonRecursiveSort: true
